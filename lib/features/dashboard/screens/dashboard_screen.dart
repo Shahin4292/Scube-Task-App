@@ -1,6 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:scube_task_app/base/custom_app_bar.dart';
-import 'package:scube_task_app/features/dashboard/widget/aata_card.dart';
 import 'package:scube_task_app/features/dashboard/widget/circular_power_widget.dart';
 import 'package:scube_task_app/features/dashboard/widget/data_view_card.dart';
 import 'package:scube_task_app/features/dashboard/widget/toggle_button_item.dart';
