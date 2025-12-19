@@ -8,7 +8,7 @@ class CircularPowerWidget extends StatelessWidget {
   final String powerText;
   final double size;
   final double strokeWidth;
-  const CircularPowerWidget({super.key, required this.title, required this.powerText, this.size = 150, this.strokeWidth = 20,});
+  const  CircularPowerWidget({super.key, required this.title, required this.powerText, this.size = 150, this.strokeWidth = 18,});
 
   @override
   Widget build(BuildContext context) {

@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:scube_task_app/base/custom_app_bar.dart';
 import 'package:scube_task_app/features/scm/widget/data_revenue_toggle.dart';
+import 'package:scube_task_app/features/scm/widget/energy_gauge.dart';
 import 'package:scube_task_app/features/scm/widget/position_header_container.dart';
 import 'package:scube_task_app/utils/app_color.dart';
 import 'package:scube_task_app/utils/dimensions.dart';
@@ -20,6 +21,7 @@ class _ScmScreenState extends State<ScmScreen> {
     return Scaffold(
       appBar: CustomAppBar(title: "SCM"),
       body: Stack(
+        fit: StackFit.expand,
         children: [
           Container(
             width: MediaQuery.sizeOf(context).width,
@@ -32,6 +34,7 @@ class _ScmScreenState extends State<ScmScreen> {
               border: Border.all(color: AppColor.borderViolet),
               color: Colors.white,
             ),
+            child: EnergyUsageWidget(),
           ),
 
           PositionedHeaderContainer(
