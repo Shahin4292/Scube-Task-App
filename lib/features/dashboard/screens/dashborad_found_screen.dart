@@ -28,7 +28,7 @@ class DashboardFoundScreen extends StatelessWidget {
               Image.asset(ImagePath.dataFound, height: 193, width: 259,),
               SizedBox(height: 8),
               Text("No data is here",style: interRegular.copyWith(fontSize: 14, color: AppColor.darkGrey)),
-              Text("please wait",style: interRegular.copyWith(fontSize: 14, color: AppColor.darkGrey)),
+              Text("please wait.",style: interRegular.copyWith(fontSize: 14, color: AppColor.darkGrey)),
             ],
           ),
         ),

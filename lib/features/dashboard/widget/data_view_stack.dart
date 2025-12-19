@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:scube_task_app/features/dashboard/screens/dashborad_found_screen.dart';
 import 'package:scube_task_app/features/dashboard/widget/vertical_indicator.dart';
+import 'package:scube_task_app/features/scm/screens/scm_screen.dart';
 import 'package:scube_task_app/utils/app_color.dart';
 import 'package:scube_task_app/utils/dimensions.dart';
 import 'package:scube_task_app/utils/image_path.dart';
@@ -46,7 +47,7 @@ class DataViewCardStack extends StatelessWidget {
                 data1: '55505.63',
                 data2: '58805.63',
                 onTap: () {
-                  Get.to(() => DashboardFoundScreen());
+                  Get.to(() => ScmScreen());
                 },
               ),
 
