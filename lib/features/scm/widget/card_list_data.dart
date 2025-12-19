@@ -14,7 +14,7 @@ class CardListData extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       width: MediaQuery.sizeOf(context).width,
-      margin: EdgeInsets.only(top: 20, left: 24, right: 24),
+      margin: EdgeInsets.only(left: 24, right: 24),
       padding: EdgeInsets.only(bottom: 4),
       decoration: BoxDecoration(
         borderRadius: BorderRadius.all(
@@ -28,10 +28,10 @@ class CardListData extends StatelessWidget {
           Padding(
             padding: const EdgeInsets.symmetric(horizontal: 30, vertical: 20),
             child: Row(
-              spacing: 30,
+              spacing: 25,
               children: [
                 Text("Energy Chart", style: interSemiBold.copyWith(fontSize: 14, color: AppColor.dukeBlue),),
-                Text(title, style: interSemiBold.copyWith(fontSize: 30, color: AppColor.dukeBlue),),
+                Text(title,overflow: TextOverflow.ellipsis, style: interSemiBold.copyWith(fontSize: 28, color: AppColor.dukeBlue),),
               ],
             ),
           ),

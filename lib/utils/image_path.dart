@@ -12,4 +12,6 @@ class ImagePath {
   static const String generatorD = 'assets/images/generatord.png';
   static const String faucet = 'assets/images/faucet.png';
   static const String dataFound = 'assets/images/data_found.png';
+  static const String search = 'assets/images/search.png';
+  static const String calendar = 'assets/images/calendar.png';
 }
