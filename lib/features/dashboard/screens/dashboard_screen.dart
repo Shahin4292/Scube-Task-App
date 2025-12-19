@@ -1,55 +1,30 @@
 import 'package:flutter/material.dart';
+import 'package:scube_task_app/base/custom_app_bar.dart';
+import 'package:scube_task_app/features/dashboard/widget/analyze_card.dart';
 import 'package:scube_task_app/features/dashboard/widget/circular_power_widget.dart';
-import 'package:scube_task_app/features/dashboard/widget/data_view_card.dart';
 import 'package:scube_task_app/features/dashboard/widget/data_view_stack.dart';
 import 'package:scube_task_app/features/dashboard/widget/toggle_button_item.dart';
 import 'package:scube_task_app/features/dashboard/widget/top_tab_bar.dart';
-import 'package:scube_task_app/features/dashboard/widget/vertical_indicator.dart';
 import 'package:scube_task_app/utils/app_color.dart';
 import 'package:scube_task_app/utils/dimensions.dart';
-import 'package:scube_task_app/utils/image_path.dart';
 import 'package:scube_task_app/utils/styles.dart';
 
-import '../widget/analyze_card.dart';
-
-class ElectricitySummaryScreen extends StatefulWidget {
-  const ElectricitySummaryScreen({super.key});
+class DashboardScreen extends StatefulWidget {
+  const DashboardScreen({super.key});
 
   @override
-  State<ElectricitySummaryScreen> createState() => _ElectricitySummaryScreenState();
+  State<DashboardScreen> createState() => _DashboardScreenState();
 }
 
-class _ElectricitySummaryScreenState extends State<ElectricitySummaryScreen> {
-  final ScrollController _scrollController = ScrollController();
+class _DashboardScreenState extends State<DashboardScreen> {
   bool isSource = true;
   int selectedIndex = 0;
-  double _wrapTop = 40;
-
-  @override
-  void initState() {
-    super.initState();
-    _scrollController.addListener(() {
-      setState(() {
-        _wrapTop = 40 + (_scrollController.offset * 0.2);
-      });
-    });
-  }
+  double wrapTop = 40;
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        surfaceTintColor: Colors.white,
-        backgroundColor: Colors.white,
-        centerTitle: true,
-        title: Text('SCM'),
-        actions: [
-          Padding(padding: EdgeInsets.only(right: Dimensions.paddingSizeLarge),
-              child: Image.asset('assets/images/bell.png',
-                height: Dimensions.paddingSizeLarge,
-                width: Dimensions.paddingSizeLarge,
-              )),
-        ],),
+      appBar: CustomAppBar(title: 'SCM',),
 
       body: SingleChildScrollView(
         scrollDirection: Axis.vertical,
@@ -132,7 +107,7 @@ class _ElectricitySummaryScreenState extends State<ElectricitySummaryScreen> {
                       child: const Divider(height: Dimensions.paddingSizeSimpleSmall,thickness: 2,),
                     ),
 
-                    DataViewCardStack(wrapTop: _wrapTop),
+                    DataViewCardStack(wrapTop: wrapTop),
                   ],
                 ),
               ),

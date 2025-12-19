@@ -119,7 +119,9 @@ class LoginScreen extends StatelessWidget {
                       ),
                       onPressed: () {
                         if (formKey.currentState!.validate()) {
-                          Get.to(() => ElectricitySummaryScreen());
+                          Get.to(() => DashboardScreen());
+                          passwordController.clear();
+                          usernameController.clear();
                         }
                       },
                       child: Text(
