@@ -1,7 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:scube_task_app/base/custom_app_bar.dart';
-import 'package:scube_task_app/features/scm/widget/card_list_data.dart';
 import 'package:scube_task_app/features/scm/widget/data_revenue_toggle.dart';
 import 'package:scube_task_app/features/scm/widget/position_header_container.dart';
 import 'package:scube_task_app/features/scm_second/screens/scm_second_screen.dart';

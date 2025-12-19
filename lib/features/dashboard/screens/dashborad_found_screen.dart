@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:scube_task_app/base/custom_app_bar.dart';
 import 'package:scube_task_app/features/dashboard/screens/dashboard_screen.dart';
 import 'package:scube_task_app/utils/app_color.dart';
 import 'package:scube_task_app/utils/dimensions.dart';
