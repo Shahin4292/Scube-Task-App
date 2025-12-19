@@ -14,4 +14,7 @@ class ImagePath {
   static const String dataFound = 'assets/images/data_found.png';
   static const String search = 'assets/images/search.png';
   static const String calendar = 'assets/images/calendar.png';
+  static const String downArrow = 'assets/images/down_arrow.png';
+  static const String upArrow = 'assets/images/up_arrow.png';
+  static const String netWorth = 'assets/images/net_worth.png';
 }

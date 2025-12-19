@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:get/get_core/src/get_main.dart';
+import 'package:get/get_navigation/src/extension_navigation.dart';
 import 'package:get/get_utils/src/platform/platform.dart';
 import 'package:scube_task_app/utils/dimensions.dart';
 import 'package:scube_task_app/utils/styles.dart';
@@ -26,10 +28,10 @@ class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
       ),
 
       centerTitle: true,
-      // leading: isBackButtonExist ? IconButton(
-      //   icon: const Icon(Icons.arrow_back_ios),
-      //   onPressed: onBackPressed ?? () => Navigator.pop(context),
-      // ) : const SizedBox(),
+      leading: isBackButtonExist ? IconButton(
+        icon: const Icon(Icons.arrow_back),
+        onPressed: onBackPressed ?? () => Get.back(),
+      ) : const SizedBox(),
       actions: [
         Padding(padding: EdgeInsets.only(right: Dimensions.paddingSizeLarge),
             child: Image.asset('assets/images/bell.png',

@@ -8,10 +8,10 @@ import 'package:scube_task_app/features/scm/widget/data_revenue_toggle.dart';
 import 'package:scube_task_app/features/scm/widget/position_header_container.dart';
 import 'package:scube_task_app/features/scm_second/widget/date_input_field.dart';
 import 'package:scube_task_app/features/scm_second/widget/second_energy_widget.dart';
+import 'package:scube_task_app/features/scm_third/screens/scm_third_screen.dart';
 import 'package:scube_task_app/utils/app_color.dart';
 import 'package:scube_task_app/utils/dimensions.dart';
 import 'package:scube_task_app/utils/image_path.dart';
-import 'package:scube_task_app/utils/styles.dart';
 
 class ScmSecondScreen extends StatefulWidget {
   const ScmSecondScreen({super.key});
@@ -27,7 +27,7 @@ class _ScmSecondScreenState extends State<ScmSecondScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: CustomAppBar(title: "SCM"),
+      appBar: CustomAppBar(title: "SCM",isBackButtonExist: true,),
       body: SingleChildScrollView(
         child: Stack(
           children: [
@@ -129,6 +129,8 @@ class _ScmSecondScreenState extends State<ScmSecondScreen> {
                       setState(() {
                         isDataSelected = false;
                       });
+                      Get.to(() => ScmThirdScreen());
+                      isDataSelected = true;
                     },
                   ),
                 ],
