@@ -4,6 +4,7 @@ import 'package:scube_task_app/features/dashboard/screens/dashboard_screen.dart'
 import 'package:scube_task_app/features/login/widget/custom_text_field.dart';
 import 'package:scube_task_app/utils/app_color.dart';
 import 'package:scube_task_app/utils/dimensions.dart';
+import 'package:scube_task_app/utils/image_path.dart';
 import 'package:scube_task_app/utils/styles.dart';
 
 class LoginScreen extends StatelessWidget {
@@ -27,7 +28,7 @@ class LoginScreen extends StatelessWidget {
 
               Column(
                 children: [
-                  Image.asset('assets/images/app_logo.png', width: 100, height: 100),
+                  Image.asset(ImagePath.appLogo, width: 100, height: 100),
 
                   SizedBox(height: Dimensions.paddingSizeLarge),
 
@@ -118,7 +119,7 @@ class LoginScreen extends StatelessWidget {
                       ),
                       onPressed: () {
                         if (formKey.currentState!.validate()) {
-                          Get.to(() => DashboardScreen());
+                          Get.to(() => ElectricitySummaryScreen());
                         }
                       },
                       child: Text(
