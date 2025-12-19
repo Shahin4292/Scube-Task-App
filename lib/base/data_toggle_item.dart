@@ -3,12 +3,12 @@ import 'package:scube_task_app/utils/app_color.dart';
 import 'package:scube_task_app/utils/dimensions.dart';
 import 'package:scube_task_app/utils/styles.dart';
 
-class ToggleItem extends StatelessWidget {
+class DataToggleItem extends StatelessWidget {
   final String title;
   final bool isSelected;
   final VoidCallback onTap;
 
-  const ToggleItem({super.key,
+  const DataToggleItem({super.key,
     required this.title,
     required this.isSelected,
     required this.onTap,
@@ -48,10 +48,10 @@ class ToggleItem extends StatelessWidget {
           Text(
             title,
             style: isSelected ? interSemiBold.copyWith(
-              fontSize: 16,
+              fontSize: 14,
               color: isSelected ? activeColor : AppColor.dukeBlue.withOpacity(0.5),
             ) : interRegular.copyWith(
-              fontSize: 16,
+              fontSize: 14,
               color: isSelected ? activeColor : AppColor.dukeBlue.withOpacity(0.5),
             ),
           ),
