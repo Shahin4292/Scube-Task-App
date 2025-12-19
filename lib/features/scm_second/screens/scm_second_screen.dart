@@ -12,6 +12,7 @@ import 'package:scube_task_app/features/scm_third/screens/scm_third_screen.dart'
 import 'package:scube_task_app/utils/app_color.dart';
 import 'package:scube_task_app/utils/dimensions.dart';
 import 'package:scube_task_app/utils/image_path.dart';
+import 'package:scube_task_app/utils/styles.dart';
 
 class ScmSecondScreen extends StatefulWidget {
   const ScmSecondScreen({super.key});
@@ -27,7 +28,27 @@ class _ScmSecondScreenState extends State<ScmSecondScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: CustomAppBar(title: "SCM",isBackButtonExist: true,),
+      appBar: AppBar(
+        surfaceTintColor: Colors.white,
+        backgroundColor: Colors.white,
+        centerTitle: true,
+        title: Text("SCM",
+          style: interMedium.copyWith(fontSize: 16),
+        ),
+        leading: IconButton(
+            icon: const Icon(Icons.arrow_back, color: Colors.black),
+            onPressed: (){Get.to(() => ScmScreen());}
+        ),
+        actions: [
+          Padding(
+            padding: EdgeInsets.only(right: Dimensions.paddingSizeLarge),
+            child: Image.asset('assets/images/bell.png',
+              height: Dimensions.paddingSizeLarge,
+              width: Dimensions.paddingSizeLarge,
+            ),
+          ),
+        ],
+      ),
       body: SingleChildScrollView(
         child: Stack(
           children: [

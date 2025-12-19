@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:scube_task_app/base/custom_app_bar.dart';
 import 'package:scube_task_app/base/data_toggle_item.dart';
+import 'package:scube_task_app/features/dashboard/screens/dashboard_screen.dart';
+import 'package:scube_task_app/features/login/screens/login_screen.dart';
 import 'package:scube_task_app/features/scm_second/screens/scm_second_screen.dart';
 import 'package:scube_task_app/features/scm/widget/card_list_data.dart';
 import 'package:scube_task_app/features/scm/widget/data_revenue_toggle.dart';
@@ -9,6 +11,7 @@ import 'package:scube_task_app/features/scm/widget/energy_gauge.dart';
 import 'package:scube_task_app/features/scm/widget/position_header_container.dart';
 import 'package:scube_task_app/utils/app_color.dart';
 import 'package:scube_task_app/utils/dimensions.dart';
+import 'package:scube_task_app/utils/styles.dart';
 
 class ScmScreen extends StatefulWidget {
   const ScmScreen({super.key});
@@ -24,7 +27,27 @@ class _ScmScreenState extends State<ScmScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: CustomAppBar(title: "SCM"),
+      appBar: AppBar(
+        surfaceTintColor: Colors.white,
+        backgroundColor: Colors.white,
+        centerTitle: true,
+        title: Text("SCM",
+          style: interMedium.copyWith(fontSize: 16),
+        ),
+        leading: IconButton(
+          icon: const Icon(Icons.arrow_back, color: Colors.black),
+          onPressed: (){Get.to(() => DashboardScreen());}
+        ),
+        actions: [
+          Padding(
+            padding: EdgeInsets.only(right: Dimensions.paddingSizeLarge),
+            child: Image.asset('assets/images/bell.png',
+              height: Dimensions.paddingSizeLarge,
+              width: Dimensions.paddingSizeLarge,
+            ),
+          ),
+        ],
+      ),
       body: SingleChildScrollView(
         child: Stack(
           children: [

@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:scube_task_app/base/custom_app_bar.dart';
+import 'package:scube_task_app/features/dashboard/screens/dashboard_screen.dart';
 import 'package:scube_task_app/utils/app_color.dart';
 import 'package:scube_task_app/utils/dimensions.dart';
 import 'package:scube_task_app/utils/image_path.dart';
@@ -11,7 +13,27 @@ class DashboardFoundScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: CustomAppBar(title: 'SCM'),
+      appBar: AppBar(
+        surfaceTintColor: Colors.white,
+        backgroundColor: Colors.white,
+        centerTitle: true,
+        title: Text("SCM",
+          style: interMedium.copyWith(fontSize: 16),
+        ),
+        leading: IconButton(
+            icon: const Icon(Icons.arrow_back, color: Colors.black),
+            onPressed: (){Get.to(() => DashboardScreen());}
+        ),
+        actions: [
+          Padding(
+            padding: EdgeInsets.only(right: Dimensions.paddingSizeLarge),
+            child: Image.asset('assets/images/bell.png',
+              height: Dimensions.paddingSizeLarge,
+              width: Dimensions.paddingSizeLarge,
+            ),
+          ),
+        ],
+      ),
       body: Padding(
         padding: EdgeInsets.only(top: Dimensions.paddingSizeMedium, left: Dimensions.paddingSizeExtraLarge, right: Dimensions.paddingSizeExtraLarge, bottom: Dimensions.paddingSizeExtraLarge),
         child: Container(
